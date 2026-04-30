@@ -8,6 +8,7 @@ export default function Experience() {
 
   return (
     <section
+      ref={ref}
       id="experience"
       className="section-container bg-slate-50/50 dark:bg-slate-900/20"
     >
@@ -17,7 +18,7 @@ export default function Experience() {
         subtitle="Roles where I have applied data and engineering to drive real impact."
       />
 
-      <div ref={ref} className="relative">
+      <div className="relative">
         {/* Vertical line */}
         <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-cyan-500/60 via-blue-500/30 to-transparent" />
 
@@ -28,7 +29,7 @@ export default function Experience() {
               className={`relative flex flex-col md:flex-row gap-6 md:gap-0 transition-all duration-700 ${
                 visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
-              style={{ transitionDelay: `${i * 150}ms` }}
+              style={{ transitionDelay: `${i * 80}ms` }}
             >
               {/* Timeline dot */}
               <div className="absolute left-4 md:left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-cyan-500 border-2 border-white dark:border-slate-950 shadow-md shadow-cyan-500/40 mt-1.5 md:mt-4" />

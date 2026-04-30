@@ -17,7 +17,7 @@ export default function SkillCard({ skill, index, animate }: Props) {
         hover:shadow-lg hover:shadow-cyan-500/5
         transition-all duration-300
         ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
-      style={{ transitionDelay: `${index * 80}ms` }}
+      style={{ transitionDelay: `${index * 50}ms` }}
     >
       {/* Subtle top accent line on hover */}
       <div className="absolute inset-x-0 top-0 h-px rounded-t-2xl bg-gradient-to-r from-cyan-500/0 via-cyan-500/60 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

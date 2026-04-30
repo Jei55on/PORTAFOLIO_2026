@@ -7,7 +7,7 @@ export default function About() {
   const { ref, visible } = useScrollReveal();
 
   return (
-    <section id="about" className="section-container">
+    <section ref={ref} id="about" className="section-container">
       <SectionHeader
         label="About"
         title="Who I Am"
@@ -15,7 +15,6 @@ export default function About() {
       />
 
       <div
-        ref={ref}
         className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-start transition-all duration-700 ${
           visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}

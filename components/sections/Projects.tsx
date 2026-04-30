@@ -9,6 +9,7 @@ const FILTERS = ['all', 'data', 'automation', 'aviation'] as const;
 type Filter = (typeof FILTERS)[number];
 
 export default function Projects() {
+  // Fix: ref on the section so visible=true before filter buttons are clicked
   const { ref, visible } = useScrollReveal();
   const [filter, setFilter] = useState<Filter>('all');
 
@@ -16,7 +17,7 @@ export default function Projects() {
     filter === 'all' ? projects : projects.filter((p) => p.category === filter);
 
   return (
-    <section id="projects" className="section-container">
+    <section ref={ref} id="projects" className="section-container">
       <SectionHeader
         label="Projects"
         title="Selected Work"
@@ -41,10 +42,7 @@ export default function Projects() {
       </div>
 
       {/* Cards grid */}
-      <div
-        ref={ref}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-      >
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filtered.map((project, i) => (
           <ProjectCard
             key={project.title}

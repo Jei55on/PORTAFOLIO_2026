@@ -15,7 +15,7 @@ export default function ProjectCard({ project, index, animate }: Props) {
       className={`card group flex flex-col h-full transition-all duration-700 ${
         animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
       } ${project.featured ? 'ring-1 ring-cyan-500/20' : ''}`}
-      style={{ transitionDelay: `${index * 100}ms` }}
+      style={{ transitionDelay: `${index * 60}ms` }}
     >
       {/* Header */}
       <div className="flex items-start justify-between gap-2 mb-3">

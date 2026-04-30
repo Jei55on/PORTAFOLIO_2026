@@ -6,13 +6,18 @@ import SkillCard from '@/components/ui/SkillCard';
 import { skillCategories } from '@/lib/data';
 
 export default function Skills() {
+  // Fix #1: ref on the section, not the grid — visible=true before tabs are even clicked
   const { ref, visible } = useScrollReveal();
   const [activeId, setActiveId] = useState(skillCategories[0].id);
 
   const activeCategory = skillCategories.find((c) => c.id === activeId)!;
 
   return (
-    <section id="skills" className="section-container bg-slate-50/50 dark:bg-slate-900/20">
+    <section
+      ref={ref}
+      id="skills"
+      className="section-container bg-slate-50/50 dark:bg-slate-900/20"
+    >
       <SectionHeader
         label="Skills"
         title="Technical Expertise"
@@ -42,10 +47,7 @@ export default function Skills() {
       </div>
 
       {/* Skill cards grid */}
-      <div
-        ref={ref}
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
-      >
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {activeCategory.skills.map((skill, i) => (
           <SkillCard
             key={skill.name}
@@ -58,7 +60,7 @@ export default function Skills() {
 
       {/* Supporting tools cloud */}
       <div
-        className={`mt-14 pt-10 border-t border-slate-200 dark:border-slate-800 transition-all duration-700 delay-500 ${
+        className={`mt-14 pt-10 border-t border-slate-200 dark:border-slate-800 transition-all duration-700 ${
           visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
         }`}
       >
