@@ -38,7 +38,7 @@ export const projects: Project[] = [
     category: 'aviation',
     featured: true,
     metrics: 'Enhanced unstable approach detection',
-    // image: '/images/projects/fdm-analysis.jpg',
+    image: '/images/Flight-Data-Analysis-for-Safety-Monitoring.png',
   },
   {
     title: 'Safety Management System Application',
@@ -48,7 +48,7 @@ export const projects: Project[] = [
     category: 'aviation',
     featured: true,
     metrics: 'Centralized SMS data org-wide',
-    // image: '/images/projects/sms-app.jpg',
+    image: '/images/Safety-Management-System-Application.png',
   },
   {
     title: 'Audit Execution & Safety Performance Dashboard',
@@ -58,7 +58,7 @@ export const projects: Project[] = [
     category: 'data',
     featured: true,
     metrics: 'Real-time safety KPI tracking',
-    // image: '/images/projects/safety-dashboard.jpg',
+    image: '/images/Audit-Execution-&-Safety-Performance-Dashboard.png',
   },
   {
     title: 'Audit Management System',
@@ -68,7 +68,7 @@ export const projects: Project[] = [
     category: 'automation',
     featured: true,
     metrics: '130+ columns → relational model',
-    // image: '/images/projects/audit-system.jpg',
+    image: '/images/Audit-Management-System.png',
   },
   {
     title: 'Safety Risk & Reporting Analytics',
@@ -77,7 +77,7 @@ export const projects: Project[] = [
     tags: ['Power BI', 'Data Analysis', 'Risk Management', 'SMS'],
     category: 'data',
     metrics: 'Risk trends surfaced from SMS data',
-    // image: '/images/projects/risk-analytics.jpg',
+    image: '/images/Safety-Risk-&-Reporting-Analytics.png',
   },
   {
     title: 'Flight Data File Processing Automation',
@@ -86,7 +86,7 @@ export const projects: Project[] = [
     tags: ['PowerShell', 'Automation', 'SARA', 'FDM'],
     category: 'automation',
     metrics: 'Eliminated manual file-handling errors',
-    // image: '/images/projects/fdm-automation.jpg',
+    image: '/images/Flight-Data-File-Processing-Automation.png',
   },
 ];
 
