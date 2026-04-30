@@ -1,9 +1,10 @@
 import Image from 'next/image';
+import type { ReactElement } from 'react';
 import { FiExternalLink, FiGithub, FiTrendingUp } from 'react-icons/fi';
 import type { Project } from '@/lib/data';
 
 /* ── Gradient cover shown when no image is provided ─────────────────────── */
-const COVERS: Record<Project['category'], { gradient: string; pattern: JSX.Element }> = {
+const COVERS: Record<Project['category'], { gradient: string; pattern: ReactElement }> = {
   aviation: {
     gradient: 'from-slate-900 via-cyan-950/80 to-slate-900',
     pattern: (
