@@ -28,12 +28,24 @@ export default function Contact() {
 
   const onSubmit = async (data: FormData) => {
     setStatus('sending');
-    // Replace this with your preferred submission method (Formspree, Resend, etc.)
-    await new Promise((r) => setTimeout(r, 1200));
-    console.log('Form data:', data);
-    setStatus('success');
-    reset();
-    setTimeout(() => setStatus('idle'), 4000);
+    try {
+      const res = await fetch('https://formspree.io/f/xpqbzroy', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(data),
+      });
+      if (res.ok) {
+        setStatus('success');
+        reset();
+        setTimeout(() => setStatus('idle'), 5000);
+      } else {
+        setStatus('error');
+        setTimeout(() => setStatus('idle'), 5000);
+      }
+    } catch {
+      setStatus('error');
+      setTimeout(() => setStatus('idle'), 5000);
+    }
   };
 
   return (
