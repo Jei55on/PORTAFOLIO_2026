@@ -25,59 +25,68 @@ export type Project = {
   github?: string;
   featured?: boolean;
   metrics?: string;
+  /** Path relative to /public, e.g. "/images/projects/fdm-analysis.jpg" */
+  image?: string;
 };
 
 export const projects: Project[] = [
   {
-    title: 'Aviation Incident Pattern Analysis',
+    title: 'Flight Data Analysis for Safety Monitoring',
     description:
-      'End-to-end Power BI dashboard analyzing 5+ years of incident reports to identify risk patterns and support proactive safety interventions. Reduced mean-time-to-detect anomalies by 40%.',
-    tags: ['Power BI', 'Python', 'SQL', 'DAX', 'Aviation Safety'],
+      'Large-scale FDM/FOQA analysis in KNIME targeting critical flight phases — approach stability, vertical speed profiles, and compliance with operational parameters. Findings fed directly into the SMS process to support data-driven safety decisions.',
+    tags: ['KNIME', 'Power BI', 'FDM/FOQA', 'Aviation Safety', 'SMS'],
     category: 'aviation',
     featured: true,
-    metrics: '40% faster anomaly detection',
+    metrics: 'Enhanced unstable approach detection',
+    // image: '/images/projects/fdm-analysis.jpg',
   },
   {
-    title: 'Quality Audit Automation Suite',
+    title: 'Safety Management System Application',
     description:
-      'Power Automate + Python pipeline that automated 80% of recurring quality audit workflows, cutting manual processing time from 3 days to 4 hours per audit cycle.',
-    tags: ['Power Automate', 'Python', 'SharePoint', 'Power BI'],
-    category: 'automation',
-    featured: true,
-    metrics: '80% workflow automation',
-  },
-  {
-    title: 'Predictive Maintenance Dashboard',
-    description:
-      'Machine-learning-assisted KNIME pipeline that forecasts component failure probability using sensor telemetry, enabling condition-based maintenance decisions.',
-    tags: ['KNIME', 'Python', 'scikit-learn', 'SQL', 'Power BI'],
-    category: 'data',
-    featured: true,
-    metrics: '25% cost reduction',
-  },
-  {
-    title: 'Flight Operations KPI Tracker',
-    description:
-      'Real-time KPI monitoring solution connecting operational databases to interactive Power BI reports consumed by C-level stakeholders on a daily basis.',
-    tags: ['Power BI', 'SQL', 'DAX', 'Azure'],
-    category: 'data',
-    metrics: 'Used by C-level daily',
-  },
-  {
-    title: 'Regulatory Compliance Reporter',
-    description:
-      'Automated document-generation pipeline that compiles audit evidence from SharePoint, formats it to EASA/ICAO templates, and delivers reports via email with zero manual effort.',
-    tags: ['Power Automate', 'Python', 'SharePoint', 'EASA', 'ICAO'],
+      'Custom Power Apps solution for end-to-end SMS workflows — centralizing safety reports, risk tracking, and event traceability in a single SharePoint-backed interface accessible across the organization.',
+    tags: ['Power Apps', 'SharePoint', 'Power Platform', 'SMS'],
     category: 'aviation',
-    metrics: '0 manual effort per report',
+    featured: true,
+    metrics: 'Centralized SMS data org-wide',
+    // image: '/images/projects/sms-app.jpg',
   },
   {
-    title: 'Crew Scheduling Optimizer',
+    title: 'Audit Execution & Safety Performance Dashboard',
     description:
-      'Linear-programming model (PuLP) that optimizes crew pairings subject to duty-time limitations and regulatory constraints, reducing scheduling cost by 15%.',
-    tags: ['Python', 'PuLP', 'Operations Research', 'Excel'],
+      'Executive Power BI dashboard integrating Safety Performance Indicators (SPIs), Safety Performance Targets (SPTs), and audit KPIs modeled from SharePoint with DAX — giving quality leadership real-time visibility into deviations.',
+    tags: ['Power BI', 'DAX', 'SPIs / SPTs', 'KPIs', 'Data Visualization'],
+    category: 'data',
+    featured: true,
+    metrics: 'Real-time safety KPI tracking',
+    // image: '/images/projects/safety-dashboard.jpg',
+  },
+  {
+    title: 'Audit Management System',
+    description:
+      'Migrated a 130+ column Excel audit tracker to a normalized relational model in SharePoint, then built a Power Apps front-end and Power Automate workflows to handle the full audit lifecycle — planning, findings, and corrective action follow-up.',
+    tags: ['SharePoint', 'Power Apps', 'Power Automate', 'Data Modeling'],
     category: 'automation',
-    metrics: '15% cost savings',
+    featured: true,
+    metrics: '130+ columns → relational model',
+    // image: '/images/projects/audit-system.jpg',
+  },
+  {
+    title: 'Safety Risk & Reporting Analytics',
+    description:
+      'Analytical solution that aggregates SMS event reports to surface risk trends, recurring hazard patterns, and critical operational areas — turning raw safety reports into actionable organizational intelligence.',
+    tags: ['Power BI', 'Data Analysis', 'Risk Management', 'SMS'],
+    category: 'data',
+    metrics: 'Risk trends surfaced from SMS data',
+    // image: '/images/projects/risk-analytics.jpg',
+  },
+  {
+    title: 'Flight Data File Processing Automation',
+    description:
+      'PowerShell automation that structures, compresses, and standardizes large volumes of raw FDM files before ingestion into the SARA analysis platform — eliminating manual handling errors and improving data availability for analysis.',
+    tags: ['PowerShell', 'Automation', 'SARA', 'FDM'],
+    category: 'automation',
+    metrics: 'Eliminated manual file-handling errors',
+    // image: '/images/projects/fdm-automation.jpg',
   },
 ];
 
