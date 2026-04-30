@@ -5,14 +5,11 @@ export const siteConfig = {
   name: 'Jeisson Daniel Rodríguez Novoa',
   title: 'Aeronautical Engineer · QA Auditor · Data Analyst',
   email: 'jeissondrn37@gmail.com',
-  linkedin: 'https://www.linkedin.com/in/jeissonrodr%C3%ADguez-novoa',
+  linkedin: 'www.linkedin.com/in/jeisson-rodríguez-novoa',
   github: 'https://github.com/Jei55on',
   location: 'Bogotá, Colombia',
-  bio: `Aeronautical Engineer with complementary training in software development and data analysis,
-  focused on applying technology to improve processes and support informed decision-making
-  in complex operational environments like aviation.
-  I combine technical rigor with analytical capability to build solutions that strengthen
-  operational safety and organizational efficiency.`,
+  bio: `Aeronautical Engineer with complementary training in software development and data analysis, focused on applying technology to improve processes and support informed decision-making in complex operational environments like aviation.
+  I combine technical rigor with analytical capability to build solutions that strengthen operational safety and organizational efficiency.`,
   heroTagline: 'Building safer, smarter aviation operations through data and quality assurance.',
 };
 
