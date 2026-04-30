@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import SectionHeader from '@/components/ui/SectionHeader';
 import { aboutValues, certifications, education, siteConfig } from '@/lib/data';
@@ -24,8 +25,15 @@ export default function About() {
           {/* Avatar */}
           <div className="relative">
             <div className="w-48 h-48 rounded-3xl bg-gradient-to-br from-cyan-400 to-blue-600 p-1 shadow-2xl shadow-cyan-500/20">
-              <div className="w-full h-full rounded-[1.375rem] bg-slate-100 dark:bg-slate-900 flex items-center justify-center">
-                <span className="text-6xl">✈️</span>
+              <div className="w-full h-full rounded-[1.375rem] overflow-hidden bg-slate-100 dark:bg-slate-900">
+                <Image
+                  src="/images/profile.jpeg"
+                  alt={siteConfig.name}
+                  width={192}
+                  height={192}
+                  className="w-full h-full object-cover"
+                  priority
+                />
               </div>
             </div>
             <div className="absolute -bottom-3 -right-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-3 py-2 shadow-lg text-center">
